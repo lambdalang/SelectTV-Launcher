@@ -13,6 +13,7 @@ public class CategoryBean {
         this.id = id;
     }
 
+
     public String getSlug() {
         return slug;
     }
