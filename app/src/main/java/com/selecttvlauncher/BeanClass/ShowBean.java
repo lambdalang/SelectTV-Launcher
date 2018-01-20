@@ -1,0 +1,51 @@
+package com.selecttvlauncher.BeanClass;
+
+/**
+ * Created by Ocs pl-79(17.2.2016) on 8/3/2016.
+ */
+public class ShowBean {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public ShowBean(int id, String name, String image, String description) {
+        this.id = id;
+        this.name = name;
+        this.image = image;
+
+        this.description = description;
+    }
+
+    private int id;
+    private String name;
+    private String image;
+    private String description;
+}

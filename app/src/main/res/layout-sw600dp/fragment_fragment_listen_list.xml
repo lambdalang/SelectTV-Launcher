@@ -1,0 +1,85 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.selecttvlauncher.ui.fragments.FragmentListenList">
+
+    <LinearLayout
+        android:id="@+id/fragment_listen_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:tint="@color/white"
+                android:id="@+id/fragment_listen_prev_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/prev" />
+
+            <TextView
+                android:id="@+id/fragment_listen_switchtext_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:text="ALL"
+                android:textColor="@color/white"
+                android:textSize="22sp"/>
+
+
+            <ImageView
+                android:id="@+id/switch_image"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/on" />
+
+            <TextView
+                android:id="@+id/fragment_listen_switchtext_free"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="FREE"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_listen_alllist_items_layout"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fragment_listen_alllist_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+                <ProgressBar
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/fragment_listen_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </ProgressBar>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

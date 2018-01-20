@@ -1,0 +1,282 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="50dp"
+    android:layout_marginEnd="50dp"
+    android:layout_marginLeft="50dp"
+    android:layout_marginStart="50dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    tools:context="com.selecttvlauncher.ui.fragments.FragmentRadioDetails">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/radio_details_main"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <FrameLayout
+                    android:layout_weight="6.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:tint="@color/white"
+                            android:id="@+id/fragment_radio_left_prev_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/prev"/>
+                        <LinearLayout
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginStart="32dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <com.selecttvlauncher.ui.views.DynamicImageView
+                                android:id="@+id/banner_image"
+                                android:background="@color/black"
+                                android:layout_width="match_parent"
+                                android:scaleType="fitXY"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/trailer_1"
+                                android:textColor="@color/text_lite_blue"
+                                android:background="@drawable/movies_button_bg"
+                                android:layout_marginTop="20dp"
+                                android:textSize="20sp"
+                                android:gravity="center"
+                                android:text="Watch Trailer #1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="44dp"/>
+
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/trailer_2"
+                                android:textSize="20sp"
+                                android:textColor="@color/text_lite_blue"
+                                android:background="@drawable/movies_button_bg"
+                                android:layout_marginTop="16dp"
+                                android:gravity="center"
+                                android:minHeight="44dp"
+                                android:text="Watch Trailer #2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_weight="4.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_marginBottom="8dp"
+                            android:id="@+id/radio_name"
+                            android:textSize="24sp"
+                            android:textColor="@color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/episodeormoviename" />
+
+                        <TextView
+                            android:layout_marginBottom="8dp"
+                            android:id="@+id/radio_description"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/white"
+                            android:maxLines="6"
+                            android:scrollbars="vertical"
+                            android:paddingBottom="5dp"
+                            android:text="@string/episodedesscription" />
+                        <LinearLayout
+                            android:id="@+id/slogan_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:id="@+id/Slogan_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Slogan:"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:id="@+id/slogan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/movie_runtime"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/address_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:id="@+id/address_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Address:"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:id="@+id/address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/movie_runtime"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/phone_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:id="@+id/phone_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Phone:"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:id="@+id/phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/movie_runtime"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/email_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:id="@+id/email_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Email:"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:id="@+id/email"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/movie_runtime"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/web_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:id="@+id/web_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Web,"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:id="@+id/bitrate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/movie_runtime"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/radio_play_button"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:background="@color/lite_green"
+                android:text="Play"
+                android:maxHeight="48dp"
+                android:minWidth="250dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center|bottom" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

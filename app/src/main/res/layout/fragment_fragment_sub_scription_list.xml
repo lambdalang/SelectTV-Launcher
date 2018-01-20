@@ -1,0 +1,56 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.selecttvlauncher.ui.fragments.FragmentSubScriptionList">
+
+    <LinearLayout
+        android:id="@+id/fragment_subscriptions_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:contentDescription="@string/empty"
+            android:id="@+id/fragment_subscriptions_prev_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/prev" />
+
+        <LinearLayout
+            android:id="@+id/fragment_subscriptions_alllist_items_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fragment_subscriptions_list_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fragment_subscriptions_sub_list_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+                <ProgressBar
+                    android:id="@+id/fragment_subscriptions_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

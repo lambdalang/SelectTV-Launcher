@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="20dp"
+    tools:context="com.selecttvlauncher.ui.fragments.HorizontalListsFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.05">
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:id="@+id/fragment_ondemand_all_content_pager_layout"
+
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9">
+
+                            <android.support.v4.view.ViewPager
+                                android:id="@+id/fragment_ondemand_all_content_pager"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#2D2C2C"/>
+
+                            <LinearLayout
+                                android:id="@+id/fragment_ondemand_all_content_pager_dots"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.05">
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dynamic_horizontalViews_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ProgressBar
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/progressBar" />
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

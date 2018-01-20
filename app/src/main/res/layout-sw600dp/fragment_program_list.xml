@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_channel_program_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_weight="1"
+        android:paddingRight="10000dp"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/txtLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|start"
+        android:padding="5dp"
+        android:text="Loading..."
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+
+</LinearLayout>

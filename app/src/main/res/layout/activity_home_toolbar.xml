@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bottom_grid_gray_color"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/activity_homescreen_toolbar_app_logo"
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/icons_layout"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/activity_homescreen_toolbar_ondemand_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="On-Demand"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/activity_homescreen_toolbar_divider"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/divider"
+                        android:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/activity_homescreen_toolbar_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/activity_homescreen_string_home"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/activity_homescreen_maincontent_divider"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/divider"
+                        android:tint="@color/white"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/activity_homescreen_toolbar_maincontent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/activity_homescreen_string_home"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/activity_channel_final_list_divider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/divider"
+                        android:tint="@color/white"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/activity_channel_final_list_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="4dp"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/activity_homescreen_string_home"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/icons_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:gravity="center|end">
+
+                    <ImageView
+                        android:id="@+id/activity_homescreen_toolbar_fullview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/ic_resize"
+                        android:tint="@color/white"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/activity_homescreen_toolbar_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/search"
+                        android:tint="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/activity_homescreen_toolbar_mail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/mail"
+                        android:tint="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/activity_homescreen_toolbar_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/info"
+                        android:tint="@color/white"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/activity_homescreen_toolbar_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/home"
+                        android:tint="@color/white"
+
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/activity_homescreen_toolbar_appmanager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/cal_android"
+                        android:tint="@color/white"
+
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/activity_homescreen_toolbar_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/logout"
+                        android:tint="@color/white"
+
+                        android:visibility="gone" />
+
+                    <android.support.v7.app.MediaRouteButton
+                        android:id="@+id/activity_homescreen_chromecast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/activity_homescreen_toolbar_exit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/close1_icon"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

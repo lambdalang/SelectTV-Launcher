@@ -1,0 +1,72 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.selecttvlauncher.ui.fragments.FragmentOndemandallList">
+
+    <LinearLayout
+        android:id="@+id/fragment_game_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+
+        <LinearLayout
+            android:id="@+id/fragment_subscriptions_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:tint="@color/white"
+                android:contentDescription="@string/empty"
+                android:id="@+id/fragment_game_prev_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/prev" />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/fragment_game_alllist_items_layout"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/fragment_game_selected_item_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="FREE"
+                android:textColor="@color/text_blue"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fragment_game_alllist_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+                <ProgressBar
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/fragment_game_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </ProgressBar>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+
+</FrameLayout>

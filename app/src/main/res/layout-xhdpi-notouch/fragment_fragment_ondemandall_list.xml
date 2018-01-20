@@ -1,0 +1,136 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.selecttvlauncher.ui.fragments.FragmentOndemandallList">
+
+    <LinearLayout
+        android:id="@+id/fragment_ondemand_layout"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:tint="@color/white"
+                android:id="@+id/fragment_ondemand_prev_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:src="@drawable/prev" />
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:id="@+id/fragment_ondemand_switch_layout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/fragment_ondemand_switchtext_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:text="ALL"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/switch_image"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/on" />
+
+            <TextView
+                android:id="@+id/fragment_ondemand_switchtext_free"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="FREE"
+                android:textColor="@color/text_blue"
+                android:textSize="20sp"
+                android:maxLines="1"
+                />
+                </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/fragment_ondemand_alllist_items_layout"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/fragment_ondemand_selected_item_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="FREE"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:layout_marginBottom="20dp"
+
+                />
+            <RelativeLayout
+                android:layout_marginBottom="10dp"
+                android:id="@+id/network_spinner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/spinner_network"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/movies_button_bg"
+                    android:overlapAnchor="false"
+                    android:spinnerMode="dropdown"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:tint="@color/white"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:padding="5dp"
+                    android:src="@drawable/spinner_icon" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fragment_ondemand_alllist_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+                <ProgressBar
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/fragment_ondemand_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </ProgressBar>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,265 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.selecttvlauncher.ui.fragments.FragmentShowSeasonsAndEpisodes">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_showsandseasons_mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_latest_episodes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/free_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Latest Free Episodes:"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/dynamic_horzontal_list_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/fragment_season_details_watchlatest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/seasons_watchlatest_string"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|end">
+
+            <Spinner
+                android:id="@+id/choose_your_episode"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@drawable/movies_button_bg"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/show_free_left"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/text_light_grey" />
+
+            <LinearLayout
+                android:id="@+id/layout_show_free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/show_free_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/text_light_grey" />
+
+                <TextView
+                    android:id="@+id/show_free_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="FREE"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/show_free_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/text_light_grey"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+
+                android:id="@+id/all_episodes_left"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/text_light_grey" />
+
+            <LinearLayout
+                android:id="@+id/layout_all_episodes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/all_episodes_top"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/text_light_grey"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/all_episodes_title"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_margin="10dp"
+
+                    android:text="ALL EPISODES"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <View
+
+                    android:id="@+id/all_episodes_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/text_light_grey" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/all_seasons_left"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/text_light_grey"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layout_all_seasons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/all_seasons_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/text_light_grey"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/all_seasons_title"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="ALL SEASONS"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <View
+
+                    android:id="@+id/all_seasons_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/text_light_grey" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/all_seasons_right"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/text_light_grey"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/text_light_grey" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="200dp">
+
+                <ProgressBar
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/fragment_details_shows_free"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:visibility="visible" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/fragment_details_shows_seasons"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/fragment_details_shows__episodes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressload_showsandseasons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+</FrameLayout>

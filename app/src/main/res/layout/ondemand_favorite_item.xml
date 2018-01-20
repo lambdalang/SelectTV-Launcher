@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.selecttvlauncher.ui.views.DynamicSquareImageview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/square_progress"
+            android:id="@+id/content_imageView" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VIEW"
+            android:background="#40000000"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/content_imageView"
+            android:layout_alignLeft="@+id/content_imageView"
+            android:layout_alignRight="@+id/content_imageView"
+
+
+            android:id="@+id/content_textView" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Installed"
+            android:textSize="11sp"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="1dp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/tick"
+            android:id="@+id/installed_textView"
+            android:textColor="@color/white"
+            android:visibility="visible"/>
+
+        <TextView
+            android:visibility="visible"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="Add"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/get_bg"
+            android:id="@+id/get_textView"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

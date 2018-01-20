@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.selecttvlauncher.ui.fragments.OnDemandYoutubeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_above="@+id/layout_prev_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/layout_youtube_cantent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <FrameLayout
+                        android:visibility="visible"
+                        android:id="@+id/demand_youtube_player_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="50dp"
+
+                        android:layout_marginEnd="80dp"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginStart="120dp"
+                        android:layout_marginRight="80dp"
+                        android:layout_marginTop="50dp" />
+                    <WebView
+                        android:visibility="gone"
+                        android:id="@+id/demand_webview_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="50dp"
+
+                        android:layout_marginEnd="80dp"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginStart="120dp"
+                        android:layout_marginRight="80dp"
+                        android:layout_marginTop="50dp"/>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/layout_prev_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_favourite"
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Continue"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

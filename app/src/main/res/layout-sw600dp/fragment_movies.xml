@@ -1,0 +1,60 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context="com.selecttvlauncher.ui.fragments.FragmentMoviesLeftContent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:tint="@color/white"
+            android:id="@+id/fragment_movie_left_prev_iconn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/prev"/>
+        <LinearLayout
+            android:id="@+id/trailer_layout"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <com.selecttvlauncher.ui.views.DynamicImageView
+                android:id="@+id/banner_image"
+                android:background="@color/black"
+                android:scaleType="fitXY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/trailer_1"
+                android:textColor="@color/white"
+                android:background="@drawable/movies_button_bg"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="Watch Trailer #1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="44dp"/>
+
+            <TextView
+                android:id="@+id/trailer_2"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:background="@drawable/movies_button_bg"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:minHeight="44dp"
+                android:text="Watch Trailer #2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

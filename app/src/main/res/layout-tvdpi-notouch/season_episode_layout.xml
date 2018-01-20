@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.selecttvlauncher.ui.views.DynamicImageView
+            android:id="@+id/seasons_episodes_poster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"/>
+        <TextView
+            android:id="@+id/episode_free_textview"
+            android:visibility="gone"
+            android:layout_margin="8dp"
+            android:layout_alignBottom="@+id/seasons_episodes_poster"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/white"
+            android:background="@color/free_bg"
+            android:text="Free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:id="@+id/seasons_episodes_name"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp" />
+    <TextView
+        android:visibility="visible"
+
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:id="@+id/seasons_episodes_date"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp" />
+</LinearLayout>

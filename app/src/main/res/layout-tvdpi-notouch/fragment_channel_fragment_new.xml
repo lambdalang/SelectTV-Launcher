@@ -1,0 +1,381 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.selecttvlauncher.ui.fragments.ChannelFragment">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/layout_channelviewby_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg2"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/channel_prev_button"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/prev" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                    android:id="@+id/spinner_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:visibility="gone">
+
+                                    <Spinner
+                                        android:id="@+id/spinner_actors"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/movies_button_bg"
+                                        android:overlapAnchor="false"
+                                        android:spinnerMode="dropdown"
+                                        android:visibility="visible" />
+
+                                    <ImageView
+                                        android:layout_width="36dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="10dp"
+                                        android:padding="5dp"
+
+                                        android:src="@drawable/spinner_icon" />
+
+                                </RelativeLayout>
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/fragment_ondemand_alllist_items"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_above="@+id/arrow_layout"
+                                    android:layout_below="@+id/spinner_layout" />
+
+                                <RelativeLayout
+                                    android:id="@+id/arrow_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginBottom="10dp"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:id="@+id/list_downscroll_arrow"
+                                        android:layout_width="36dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/spinner_icon" />
+
+                                </RelativeLayout>
+
+                                <ProgressBar
+                                    android:id="@+id/progressBar_center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+
+                            android:layout_weight="0.7">
+
+                            <FrameLayout
+                                android:id="@+id/youtube_fragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:visibility="visible" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearSubMainRight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.9"
+                        android:orientation="vertical">
+
+                        <include
+                            android:id="@+id/ui_row_channel_video_holder"
+                            layout="@layout/ui_row_channel_tab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#015389" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <FrameLayout
+                                android:id="@+id/frameMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="gone">
+
+                                <ProgressBar
+                                    android:id="@+id/progressLoad"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+
+                                <ListView
+                                    android:id="@+id/listStreams"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="start|top"
+                                    android:divider="@color/streamlist_divider"
+                                    android:dividerHeight="1dp" />
+
+                            </FrameLayout>
+
+                            <ScrollView
+                                android:id="@+id/overall_scroll"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fadeScrollbars="false"
+                                android:fillViewport="true"
+                                android:scrollbarSize="50dp"
+                                android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+                                android:scrollbarTrackVertical="@drawable/scrollbar_vertical_track">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+
+                                    android:weightSum="1">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.30"
+                                        android:background="#004A7C"
+                                        android:orientation="vertical">
+
+                                        <ScrollView
+                                            android:id="@+id/listChannelTitle"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="#004A7C">
+
+                                            <LinearLayout
+                                                android:id="@+id/linearscrollChannelTitle"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical">
+
+                                            </LinearLayout>
+                                        </ScrollView>
+                                    </LinearLayout>
+
+                                    <HorizontalScrollView
+                                        xmlns:android="http://schemas.android.com/apk/res/android"
+                                        xmlns:tools="http://schemas.android.com/tools"
+                                        android:id="@+id/channelTabContent"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.70"
+                                        android:background="#01395E"
+
+                                        android:visibility="visible">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                            <ScrollView
+                                                android:id="@+id/listChannelDesc"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:background="#01395E">
+
+                                                <LinearLayout
+                                                    android:id="@+id/linearscrollChannelDesc"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="vertical">
+
+                                                </LinearLayout>
+                                            </ScrollView>
+                                        </LinearLayout>
+
+                                    </HorizontalScrollView>
+
+                                </LinearLayout>
+                            </ScrollView>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_all_channelview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_black"
+        android:paddingBottom="30dp"
+        android:paddingEnd="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:paddingStart="50dp"
+        android:paddingTop="30dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/channels_unselecetd_texcolor"
+            android:paddingBottom="1dp"
+            android:paddingEnd="2dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingStart="2dp"
+            android:paddingTop="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/channels_selecetd_bg">
+
+                <LinearLayout
+                    android:id="@+id/dynamic_horizontalViews_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/dynamic_horizontalViews"
+                        layout="@layout/allchannels_layout" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearFullScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+
+            android:src="@drawable/splash_logo" />
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <TextView
+                android:id="@+id/txt_splash_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Loading..."
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                android:id="@+id/splash_progress"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:id="@+id/txt_splash_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="0%"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>

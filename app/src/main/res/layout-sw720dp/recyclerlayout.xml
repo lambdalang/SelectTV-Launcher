@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_layout"
+    android:layout_width="match_parent"
+    android:layout_height="43dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layoutInfo"
+        style="@style/SelectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="42.5dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/view"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtChannelName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Channel Name"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txtChannel_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Channel Name"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <com.selecttvlauncher.ui.views.CustomScrollView
+        android:id="@+id/horizontal_scroll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:id="@+id/layoutProgramList"
+            android:layout_width="match_parent"
+            android:layout_height="42.5dp"
+            android:visibility="visible"></FrameLayout>
+    </com.selecttvlauncher.ui.views.CustomScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_dark" />
+
+</LinearLayout>

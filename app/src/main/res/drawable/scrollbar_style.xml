@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:width="60dp" android:color="#021C23" />
+    <stroke android:width="3dp" android:color="@color/streamlist_divider"  />
+    <padding android:left="3dp"
+        android:top="3dp"
+        android:right="3dp"
+        android:bottom="3dp" />
+
+</shape>

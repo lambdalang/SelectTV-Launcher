@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+    <RelativeLayout
+
+        android:layout_width="400dp"
+        android:layout_height="275dp"
+        android:background="@drawable/app_dialog_bg"
+        android:layout_margin="25dp"
+        android:layout_centerInParent="true"
+        android:padding="15dp">
+
+
+
+    <LinearLayout
+        android:id="@+id/text_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_dialog_connecting_txt"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:id="@+id/title_textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_dialog_download_txt"
+            android:textColor="@color/text_blue"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/header_textView" />
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/text_layout"
+            android:weightSum="1"
+            android:gravity="center"
+            android:layout_above="@+id/button_layout"
+            android:padding="10dp">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25">
+
+                <com.selecttvlauncher.ui.views.DynamicSquareImageview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/network_imageView"
+                    android:layout_centerInParent="true"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="Note: After you have downloaded \n the Fox app,please return to our app \n to continue."
+                android:id="@+id/note_textView" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/button_layout"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="CANCEL"
+            android:layout_weight="0.5"
+            android:id="@+id/cancle_textView"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/favoursite"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="INSTALL FOX"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:layout_weight="0.5"
+            android:lines="1"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:background="@drawable/rent_buy"
+            android:id="@+id/install_textView" />
+    </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

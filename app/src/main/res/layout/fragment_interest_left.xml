@@ -1,0 +1,130 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.selecttvlauncher.ui.fragments.AccountFragment">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:paddingTop="8dp"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/prev"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:visibility="gone"
+                     />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/personalize_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Personalize"
+                android:layout_gravity="start|left"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:drawableLeft="@drawable/ic_setting"
+                android:visibility="gone"
+
+                android:textColor="@color/white"
+
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <ImageView
+                    android:tint="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/prev"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:id="@+id/back_imageView" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/main_layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/fragment_Interest_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/sub_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+               >
+                <android.support.v7.widget.RecyclerView
+                    android:layout_above="@+id/addRemove_text"
+                    android:id="@+id/fragment_Interest_Sublist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+                <TextView
+                    android:id="@+id/addRemove_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add / Remove"
+                    android:layout_gravity="start|left"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/white"
+
+                    android:layout_alignParentBottom="true"
+
+                    />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:id="@+id/linearFullScreen"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width = "350dp"
+            android:layout_height="100dp"
+
+            android:src="@drawable/splash_logo"/>
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="500dp"
+            android:paddingBottom="30dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:text="Loading..."
+                android:textSize="26sp"
+                android:id="@+id/txt_splash_title"/>
+            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                android:id="@+id/splash_progress"
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="#ffffff"
+                android:text="0%"
+                android:textSize="26sp"
+                android:id="@+id/txt_splash_progress"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/activity_homescreen_toolbar"
+            layout="@layout/activity_home_toolbar" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+           >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg2"
+                android:layout_weight="1"
+                android:weightSum="1"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/channel_prev_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/prev"/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:id="@+id/spinner_layout"
+                            android:layout_width="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_height="wrap_content">
+                            <Spinner
+                                android:background="@drawable/movies_button_bg"
+                                android:spinnerMode="dropdown"
+                                android:visibility="visible"
+                                android:overlapAnchor="false"
+                                android:id="@+id/spinner_actors"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="5dp"
+                                android:layout_marginRight="10dp"
+
+                                android:src="@drawable/spinner_icon"/>
+
+                        </RelativeLayout>
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_below="@+id/spinner_layout"
+                            android:layout_above="@+id/arrow_layout"
+                            android:id="@+id/fragment_ondemand_alllist_items"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:id="@+id/arrow_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="10dp">
+                            <ImageView
+                                android:id="@+id/list_downscroll_arrow"
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/spinner_icon"
+                                android:layout_centerInParent="true"/>
+
+                        </RelativeLayout>
+                        <ProgressBar
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:id="@+id/progressBar_center" />
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_weight="0.7">
+
+                    <com.google.android.youtube.player.YouTubePlayerView
+                        android:id="@+id/youtube_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                         />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearSubMainRight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="2.9">
+
+                <include
+                    android:id="@+id/ui_row_channel_video_holder"
+                    layout="@layout/ui_row_channel_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#015389"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <FrameLayout
+                        android:visibility="gone"
+                        android:id="@+id/frameMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ProgressBar
+                            android:id="@+id/progressLoad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"/>
+
+                        <ListView
+                            android:id="@+id/listStreams"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:dividerHeight="1dp"
+                            android:divider="@color/streamlist_divider"
+                            android:layout_gravity="left|top"/>
+
+                    </FrameLayout>
+                    <ScrollView
+                        android:id="@+id/overall_scroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbarSize="50dp"
+                        android:fadeScrollbars="false"
+                        android:fillViewport="true"
+                        android:scrollbarTrackVertical="@drawable/scrollbar_vertical_track"
+                        android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="1"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.30"
+                            android:orientation="vertical"
+                            >
+                            <ScrollView
+                                android:background="#004A7C"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/listChannelTitle">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/linearscrollChannelTitle"
+                                    android:orientation="vertical">
+
+                                </LinearLayout>
+                            </ScrollView>
+                        </LinearLayout>
+
+                        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:id="@+id/channelTabContent"
+                            android:visibility="visible"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.70"
+                            android:background="#01395E"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical" >
+                                <ScrollView
+                                    android:background="#01395E"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/listChannelDesc">
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/linearscrollChannelDesc"
+                                        android:orientation="vertical">
+
+                                    </LinearLayout>
+                                </ScrollView>
+                            </LinearLayout>
+
+                        </HorizontalScrollView>
+                    </LinearLayout>
+                    </ScrollView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,120 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.selecttvlauncher.ui.fragments.AppDownloadFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/fragment_appmanager_newlayout_note_text"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/spinner_layout_linear"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:visibility="visible"
+                android:weightSum="1">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/categories_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="0.7"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/fragment_appmanager_newlayout_downloadtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Fast Download"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/fragment_appmanager_newlayout_description_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Our SmartGuide helps you unify and manager over\n1 million FREE TV shows and movies available online."
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/fragment_appmanager_newlayout_help_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/need_help_watch_this_video"
+                    android:textColor="@color/white" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/dynamic_content_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+
+
+
+        </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/fragment_appmanager_newlayout_note_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:layout_above="@+id/done_btn"
+            android:text="@string/appmanager_note_string"
+            android:textColor="@color/white" />
+        <Button
+            android:id="@+id/done_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_favourite"
+            android:paddingBottom="5dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:paddingTop="5dp"
+            android:text="Done"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>
