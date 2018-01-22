@@ -12,8 +12,6 @@ public class CategoryBean {
         this.name = name;
         this.id = id;
     }
-
-
     public String getSlug() {
         return slug;
     }
