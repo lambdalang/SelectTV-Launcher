@@ -14,7 +14,6 @@ public class CategoryBean {
     }
 
 
-
     public String getSlug() {
         return slug;
     }
